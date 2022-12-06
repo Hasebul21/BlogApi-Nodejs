@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const db = require('./dbConfig');
+const db = require('../dbConfig');
 
 const User = db.define('User', {
    // Model attributes are defined here
@@ -11,7 +11,6 @@ const User = db.define('User', {
       type: Sequelize.STRING,
       allowNull: false,
       isEmail: true,
-      unique: true,
    },
    password: {
       type: Sequelize.STRING,
